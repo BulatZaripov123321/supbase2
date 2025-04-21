@@ -100,6 +100,11 @@ header {
                     font-size: 14px;
                     color: white;
                 }
+                p{
+                    font-size: 14px;
+                    color: white;
+                    cursor: pointer;
+                }
 
             }
         }
@@ -121,13 +126,138 @@ header {
                 cursor: pointer;
             }
 
-            a {
+            .btn {
                 color: white;
                 font-size: 14px;
                 font-family: 'Roboto-Bold';
                 font-weight: 900;
+                cursor: pointer;
+                border: none;
+                background-color: #ffffff00;
             }
         }
+
+        .modal_aut {
+            width: 100%;
+            height: 100%;
+            background-color: #3f3f3f6b;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            .modal_content_aut {
+                height: 400px;
+                width: 400px;
+                background-color: #181818;
+                color: white;
+                position: relative;
+
+                .aut {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 80px;
+                    gap: 10px;
+
+                    input {
+                        height: 30px;
+                        width: 100%;
+                        outline: none;
+                        padding-left: 5px;
+
+                    }
+
+                    input[type=submit] {
+                        background-color: #24B47E;
+                        color: white;
+                        border: none;
+                    }
+
+                    .close {
+                        position: absolute;
+                        right: 20px;
+                        top: 10px;
+                        font-size: 30px;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        font-size: 14px;
+
+                        span {
+                            color: aqua;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal_reg {
+            width: 100%;
+            height: 100%;
+            background-color: #3f3f3f6b;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            .modal_content_reg {
+                height: 500px;
+                width: 500px;
+                background-color: #181818;
+                color: white;
+                position: relative;
+
+                .reg {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 20px 80px;
+                    gap: 10px;
+
+                    input {
+                        height: 30px;
+                        width: 100%;
+                        outline: none;
+                        padding-left: 5px;
+
+                    }
+
+                    input[type=submit] {
+                        background-color: #24B47E;
+                        color: white;
+                        border: none;
+                    }
+
+                    .close {
+                        position: absolute;
+                        right: 20px;
+                        top: 10px;
+                        font-size: 30px;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        font-size: 14px;
+
+                        span {
+                            color: aqua;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -306,9 +436,11 @@ header {
 
                     }
                 }
-                .bg{
+
+                .bg {
                     background-color: red;
                 }
+
                 .txt3 {
                     display: flex;
                     padding-top: 21px;
@@ -340,17 +472,21 @@ header {
                     margin-top: 20px;
                     border: 1px solid #2A2A2A;
                 }
-                .logo{
+
+                .logo {
                     margin-top: 50%;
-                    img{
+
+                    img {
                         width: 200px;
                     }
                 }
-                .qwqw{
+
+                .qwqw {
                     margin-top: 100px;
                     display: flex;
                     gap: 40px;
-                    img{
+
+                    img {
                         width: 50px;
                     }
                 }
@@ -361,7 +497,8 @@ header {
         .information.active {
             display: flex;
             justify-content: space-between;
-            gap: 20px;        }
+            gap: 20px;
+        }
     }
 }
 
