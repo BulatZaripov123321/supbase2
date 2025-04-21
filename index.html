@@ -56,14 +56,69 @@
 
                     </div>
                     <a href="">Beta</a>
-                    <a href="">Pricing</a>
+                    <p href="" onclick="openAut()">Войти</p>
                 </div>
             </div>
             <div class="header_items_right">
                 <button>Start your project</button>
-                <a href="">Sign in</a>
+                <button class="btn" >Sign in</button>
+            </div>
+            <div class="modal_reg modal" id="modal_reg">
+                <div class="modal_content_reg">
+                    <form class="reg">
+                        <h2>Зарегестрироваться</h2>
+                        <label>Имя</label>
+                        <input type="text">
+                        <label>Почта</label>
+                        <input type="email">
+                        <label>Пароль</label>
+                        <input type="password">
+                        <label>Повторить пароль</label>
+                        <input type="password">
+                        <p>уже есть аккаунт?
+                            <span onclick="openAut()">Войти</span>
+                        </p>
+                        <input type="submit" value="Зарегестрироваться">
+                        <div class="close" onclick="closeModal()">&#215</div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal_aut modal" id="modal_aut">
+                <div class="modal_content_aut">
+                    <form class="aut">
+                        <h2>Войти</h2>
+                        <label>Почта</label>
+                        <input type="email">
+                        <label>Пароль</label>
+                        <input type="password">
+                        <input type="submit" value="Войти">
+                        <p>Еще не зарегестрированы?<br>
+                            <span onclick="openReg()">Зарегестрироваться</span> прямо сейчас
+                        </p>
+                        <div class="close" onclick="closeModal()">&#215</div>
+                    </form>
+                </div>
             </div>
         </div>
+        <script>
+            let modalAut = document.getElementById('modal_aut')
+            let modalReg = document.getElementById('modal_reg')
+            function openAut() {
+                modalAut.style.display = "flex"
+                modalReg.style.display = "none"
+
+            }
+            function closeModal(){
+                modalAut.style.display = "none"
+                modalReg.style.display = "none"
+            }
+            function openReg(){
+                modalReg.style.display = "flex"
+                modalAut.style.display = "none"
+
+            }
+        </script>
     </header>
     <!-- header end -->
 
